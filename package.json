@@ -1,0 +1,67 @@
+{
+  "name": "@crude/form",
+  "version": "0.0.1",
+  "description": "A react hoc handling form state",
+  "author": "luckcoding",
+  "main": "lib/index.js",
+  "esnext": "src/index.js",
+  "scripts": {
+    "clean": "rimraf es/* lib/* dist/*",
+    "build": "npm run build:lib && npm run build:esm && npm run build:umd",
+    "build:umd": "rollup -c",
+    "build:lib": "babel src --out-dir lib",
+    "build:esm": "cross-env BABEL_ENV=esm-dir babel src --out-dir es",
+    "lint": "eslint --ext .js src --fix",
+    "release": "npm run build && npm publish --access public"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.2",
+    "babel-loader": "^8.0.6",
+    "cross-env": "^5.2.0",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "rimraf": "^2.6.3",
+    "rollup": "^1.17.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-babel-minify": "^9.0.0",
+    "rollup-plugin-commonjs": "^10.0.1",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
+    "rollup-plugin-replace": "^2.2.0"
+  },
+  "homepage": "https://github.com/luckcoding/crude-form",
+  "keywords": [
+    "react",
+    "react hoc",
+    "react effect"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luckcoding/crude-form.git"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md",
+    "lib",
+    "dist",
+    "src",
+    "es"
+  ],
+  "peerDependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6"
+  },
+  "dependencies": {
+    "@crude/extras": "^0.0.1",
+    "hoist-non-react-statics": "^3.3.0"
+  }
+}
