@@ -303,6 +303,6 @@ Field.propTypes = {
 };
 
 export default {
-  create,
+  create: form,
   Field
 };
