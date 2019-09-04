@@ -1,6 +1,6 @@
 {
   "name": "@crude/form",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A react hoc handling form state",
   "author": "luckcoding",
   "main": "lib/index.js",
@@ -61,7 +61,7 @@
     "react": "^16.8.6"
   },
   "dependencies": {
-    "@crude/extras": "^0.0.1",
+    "@crude/extras": "^0.2.0",
     "hoist-non-react-statics": "^3.3.0"
   }
 }

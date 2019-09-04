@@ -644,9 +644,9 @@
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/@comandeer/babel-plugin-banner/-/babel-plugin-banner-5.0.0.tgz#30969cb08e810b67810d41761d0cfac292231ea9"
 
-"@crude/extras@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@crude/extras/-/extras-0.0.1.tgz#62d10788be3a8bcd8d412f07bb30cab5d89ab233"
+"@crude/extras@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@crude/extras/-/extras-0.2.0.tgz#15da450e06881ad6c62580b39b4df4c77c7f301e"
 
 "@types/estree@0.0.39":
   version "0.0.39"
