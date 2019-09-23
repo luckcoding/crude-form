@@ -1,6 +1,6 @@
 {
   "name": "@crude/form",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "description": "A react hoc handling form state",
   "author": "luckcoding",
   "main": "lib/index.js",

@@ -245,7 +245,7 @@ class Field extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      value: props.initial,
+      value: this.props.handle(props.initial),
     };
     this.onChange = this.onChange.bind(this);
   }
@@ -253,7 +253,7 @@ class Field extends PureComponent {
   componentDidMount() {
     const { name, initial, validate } = this.props;
     this.context.register(name, {
-      initial,
+      initial: this.props.handle(initial),
       validate,
     });
   }
@@ -266,7 +266,7 @@ class Field extends PureComponent {
     const value = isObject(e) && isObject(e.target)
       ? e.target.value
       : e;
-    this.setState({ value }, () => {
+    this.setState({ value: this.props.handle(value || '') }, () => {
       this.context.onChange(this.props.name, value);
     });
   }
@@ -294,8 +294,10 @@ class Field extends PureComponent {
 Field.contextType = FormContext;
 Field.defaultProps = {
   initial: '',
+  handle: value => value,
 };
 Field.propTypes = {
+  handle: PropTypes.func,
   name: PropTypes.string.isRequired,
   initial: PropTypes.any,
   component: PropTypes.any.isRequired,
